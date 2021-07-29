@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.btn_area {
+	clear:both;
+	width:100%;
+}
+.v-btn {
+	display: inline-block;
+	padding-left:.5rem;
+	padding-right:.5rem;
+	min-width:10px;
+	font-weight: 700;
+	color:#202020;
+	.v-btn__content {
+		width:100%;
+		height:inherit;
+		line-height:inherit;
+		font-size:inherit;
+		font-weight: inherit;
+		color:inherit;
+	}
+	&.btn-full {
+		width:100%;
+	}
+	&.btn-ic { // 32 X 32
+		width:2rem;
+		height:2rem;
+		background: {
+			repeat: no-repeat;
+			position: center center;
+			size: 2rem;
+		}
+	}
+}
+

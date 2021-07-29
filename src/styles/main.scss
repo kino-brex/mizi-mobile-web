@@ -1,0 +1,141 @@
+@charset "UTF-8";
+@import 'mixins';
+
+.main_navtab {
+	margin-bottom:2rem;
+	.tabs {	
+		float:left;
+		margin-right:1rem;
+		font-size:1.125rem;
+		font-weight: 700;
+		color:rgba(255,255,255, .4);
+		p {
+			font-size:inherit;
+			font-weight: inherit;
+			color:inherit;
+		}
+		&.active {
+			color:#fff;
+		}
+	}
+	&:after {
+		@extend %clearer
+	}
+}
+
+.main-wrap {
+	position:relative;
+	min-height:100%;
+}
+
+.card-case {
+	a {
+		display: block;
+		width:100%;
+		height:100%;
+	}
+	.card {
+		width:100%;
+		padding:1.25rem;
+		border-radius: 14px;
+		text-align: left;
+		overflow: hidden;
+	}
+	.card_head {
+		margin-bottom:1rem;
+		p {
+			display: inline-block;
+			font-size:0.875rem;
+			font-weight: 700;
+			color:#fff;
+			span {
+				display: inline-block;
+				margin-top:-5px;
+				margin-left:8px;
+				font-size:0.875rem;
+				font-weight: inherit;
+				color:#fff;
+			}
+		}
+		.head-live {
+			color:#DEF241;
+		}
+	}
+	.card_cont {
+		position:relative;
+		padding-top:1rem;
+		.title {
+			position: absolute;
+			top:0;
+			left:0;
+			max-width:10.813rem;
+			font-size:2.5rem;
+			font-weight:900;
+			line-height:1.4;
+			color:#fff;
+			z-index: 1;
+		}
+	}
+
+	.figure {
+		position:relative;
+		width:100%;
+		height:0;
+		padding-bottom:100%;
+		right:-4rem;
+		overflow: hidden;
+		svg {
+			top:0;
+			right:0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+		mask rect {
+			fill: rgba(255, 255, 255, 1);
+		}
+		.vod {
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+		}
+
+		.fig-type01 {
+			& > rect {
+				fill: #5934D5;
+				-webkit-mask: url(#maskType01);
+				mask: url(#maskType01);
+			}
+		}
+	}
+
+	.stamp_time {
+		position:absolute;
+		right:0;
+		bottom:0;
+		width:6.25rem;
+		height:6.25rem;
+		background: {
+			image: url(/assets/images/main/stamp_live-time.png);
+			size: cover;
+			repeat: no-repeat;
+			position: center center;
+		}
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		p {
+			font-size:0.875rem;
+			font-weight: 700;
+			color:#826DFF;
+			span {
+				display: block;
+				font-size:0.625rem;
+				font-weight: 700;
+				color:inherit;
+			}
+		}
+	}
+}
