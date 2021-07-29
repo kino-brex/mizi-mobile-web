@@ -50,7 +50,7 @@
 			color:#fff;
 			span {
 				display: inline-block;
-				margin-top:-5px;
+				margin-top:-1px;
 				margin-left:8px;
 				font-size:0.875rem;
 				font-weight: inherit;
@@ -64,7 +64,7 @@
 	.card_cont {
 		position:relative;
 		padding-top:1rem;
-		.title {
+		.heading {
 			position: absolute;
 			top:0;
 			left:0;
@@ -73,7 +73,7 @@
 			font-weight:900;
 			line-height:1.4;
 			color:#fff;
-			z-index: 1;
+			z-index: 2;
 		}
 	}
 
@@ -82,7 +82,8 @@
 		width:100%;
 		height:0;
 		padding-bottom:100%;
-		right:-4rem;
+		right:-9.6%;
+		text-align: center;
 		overflow: hidden;
 		svg {
 			top:0;
@@ -90,9 +91,17 @@
 			width: 100%;
 			height: 100%;
 			position: absolute;
+			z-index: 1;
 		}
 		mask rect {
 			fill: rgba(255, 255, 255, 1);
+		}
+		img {
+			position:absolute;
+			left:50%;
+			top:50%;
+			@include transform(translate(-50%, -50%));
+			z-index: 0;
 		}
 		.vod {
 			min-width: 100%;
@@ -108,6 +117,9 @@
 				mask: url(#maskType01);
 			}
 		}
+		@media screen and (min-width:768px) {
+			right:-11%;
+		}
 	}
 
 	.stamp_time {
@@ -117,7 +129,7 @@
 		width:6.25rem;
 		height:6.25rem;
 		background: {
-			image: url(/assets/images/main/stamp_live-time.png);
+			image: url(../assets/images/main/stamp_live-time.png);
 			size: cover;
 			repeat: no-repeat;
 			position: center center;
@@ -126,6 +138,7 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		z-index: 1;
 		p {
 			font-size:0.875rem;
 			font-weight: 700;
@@ -136,6 +149,16 @@
 				font-weight: 700;
 				color:inherit;
 			}
+		}
+	}
+
+	.wrt_info {
+		figure {
+			display: inline-block;
+			width:34px;
+			height:34px;
+			border-radius: 50%;
+			overflow: hidden;
 		}
 	}
 }

@@ -12,13 +12,13 @@
             </p>
           </div>
           <div class="card_cont">
-            <p class="title">여름에 딱! 데일리 메이크업</p>
+            <p class="heading">여름에 딱! 데일리 메이크업</p>
             <div class="figure">
               <svg class="fig-type01" viewBox="0 0 720 720">
                 <defs>
                   <mask id="maskType01" x="0" y="0" width="100%" height="100%" >
                     <rect x="0" y="0" width="100%" height="100%"/>
-                    <image xlink:href="../../assets/images/main/Main_Cover_1.svg" x="0" y="0" width="100%" height="100%" ></image>
+                    <image xlink:href="../../assets/images/main/Main_Cover1.svg" x="0" y="0" width="100%" height="100%" ></image>
                   </mask>
                 </defs><rect width="100%" height="100%"/>
               </svg><rect width="100%" height="100%"/>
@@ -31,7 +31,7 @@
             </div>
 
             <div class="wrt_info">
-              <figure></figure>
+              <figure><img src="../../assets/images/dummy/@profile01.jpeg"></figure>
               이사배
             </div>
           </div>
