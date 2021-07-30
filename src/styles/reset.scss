@@ -142,21 +142,25 @@ button {cursor:pointer; border:none; margin:0; padding:0;background-color: rgba(
 
 // vuetify reset
 body {
-	.theme--light {
+	[class*='theme--'] {
+	// .theme--light {
 		&.v-application {
 			background-color: #202020;
 			p {
 				margin-bottom:0;
 			}
+			ul, ol {
+				padding-left:0;
+			}
 		}
 		&.v-btn {
+			box-shadow: none;
 			&:before {
 				display: none;
 			}
 			&:not(.v-btn--round){
 				&.v-size--default {
 					min-width:auto;
-					// height:inherit;
 					padding:inherit;
 				}
 			}

@@ -82,27 +82,4 @@ export default class MainLayout extends Vue {
 </script>
 <style lang="scss">
 @import '@/styles/main.scss';
-.bottom-tab-bar {
-  height: 88px;
-  width: 100%;
-  position: fixed;
-  bottom: 0px;
-  display: flex;
-  background-color: black;
-  .bottom-tab {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    em {
-      color: lightgray;
-      font-size: 24px;
-    }
-    &.active {
-      em {
-        color: mediumpurple;
-      }
-    }
-  }
-}
 </style>
