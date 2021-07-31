@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+// Icon
+.ic-18 {
+	width:1.125rem;
+	height:1.125rem;
+	background-size:1.125rem;
+}
+.ic-32 {
+	width:2rem;
+	height:2rem;
+	background-size:2rem;
+}
+[class^='ic-'] {
+	display: inline-block;
+	background: {
+		repeat: no-repeat;
+		position: center center;
+		size: cover;
+	}
+	margin-top:-2px;
+	&.ic_live {
+		background-image: url(../assets/icons/ico_live.png);
+	}
+	&.ic_live-pink {
+		background-image: url(../assets/icons/ico_live-pink.png);
+	}
+	&.ic_vod {
+		background-image: url(../assets/icons/ico_vod.png);
+	}
+	&.ic_locked {
+		background-image: url(../assets/icons/ico_lock.png);
+	}
+	&.ic_locked-bk {
+		background-image: url(../assets/icons/ico_lock-bk.png);
+	}
+	&.ic_quest {
+		background-image: url(../assets/icons/ico_question.png);
+	}
+	&.ic_noti {
+		background-image: url(../assets/icons/ico_notice.png);
+	}
+	&.ic_user-count {
+		background-image: url(../assets/icons/ico_user-count.png);
+	}
+	&.ic_user-vod {
+		background-image: url(../assets/icons/ico_user-vod.png);
+	}
+	&.ic_user-live {
+		background-image: url(../assets/icons/ico_user-live.png);
+	}
+	&.ic_reply {
+		background-image: url(../assets/icons/ico_reply.png);
+	}
+}
+
+// Emoji
+.emoji {
+  display: inline-block;
+  background: {
+    position:center center;
+    repeat:no-repeat;
+    size:cover;
+  }
+  vertical-align: top;
+  &.size-44 {
+    width:2.75rem;
+    height:2.75rem;
+  }
+  &.em_home {
+    background-image: url(../assets/icons/emoji_home.png)
+  }
+}

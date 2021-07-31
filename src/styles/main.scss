@@ -28,268 +28,40 @@
 	min-height:100%;
 }
 
-.card-case {
-	a {
-		display: block;
-		width:100%;
-		height:100%;
+[class^='stamp_'] {
+	position:absolute;
+	right:0;
+	bottom:0;
+	width:6.25rem;
+	height:6.25rem;
+	background: {
+		size: cover;
+		repeat: no-repeat;
+		position: center center;
 	}
-	.card {
-		width:100%;
-		padding:1.25rem;
-		margin-bottom:1.5rem;
-		border-radius: 14px;
-		text-align: left;
-		overflow: hidden;
-		&.card-template01 {
-			background-color:#5934D5;
-		}
-		&.card-template02 {
-			background-color:#EA3BF6;
-			.wrt_info {
-				.wrt {
-					max-width:40%;
-				}
-			}
-		}
-		&.card-template03 {
-			background-color:#000;
-		}
-		&.card-template04 {
-			background-color:#FFF960;
-		}
-	}
-	.card_head {
-		position:relative;
-		margin-bottom:1rem;
-		p {
-			display: inline-block;
-			font-size:0.875rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	z-index: 1;
+	p {
+		font-size:0.875rem;
+		font-weight: 700;
+		color:#826DFF;
+		span {
+			display: block;
+			font-size:0.625rem;
 			font-weight: 700;
-			color:#fff;
-			span {
-				display: inline-block;
-				margin-top:-1px;
-				margin-left:8px;
-				font-size:0.875rem;
-				font-weight: inherit;
-				color:#fff;
-			}
-		}
-		.head-live {
-			color:#DEF241;
-		}
-		.head-vod {
-			color:#31C1FF;
-		}
-		.head-question {
-			color:#BA47E3;
-		}
-
-		.btn-locked {
-			position:absolute;
-			right:-5px ;
-			top:0;
-			width:2rem;
-			background-color: transparent;
+			color:inherit;
 		}
 	}
-	.card_cont {
-		position:relative;
-		padding-top:1rem;
-		.heading {
-			position: absolute;
-			top:0;
-			left:0;
-			max-width:10.813rem;
-			font-size:2.5rem;
-			font-weight:900;
-			line-height:1.4;
-			color:#fff;
-			z-index: 2;
-		}
-	}
-
-	.figure {
-		position:relative;
-		width:100%;
-		height:0;
-		padding-bottom:100%;
-		right:-9.6%;
-		text-align: center;
-		overflow: hidden;
-		svg {
-			top:0;
-			right:0;
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			z-index: 1;
-		}
-		mask rect {
-			fill: rgba(255, 255, 255, 1);
-		}
-		img {
-			position:absolute;
-			left:50%;
-			top:50%;
-			@include transform(translate(-50%, -50%));
-			width:100%;
-			height:100%;
-			z-index: 0;
-		}
-		.vod {
-			min-width: 100%;
-			min-height: 100%;
-			width: auto;
-			height: auto;
-		}
-
-		.fig-type01 {
-			& > rect {
-				fill: #5934D5;
-				-webkit-mask: url(#maskType01);
-				mask: url(#maskType01);
-			}
-		}
-		.fig-type02 {
-			& > rect {
-				fill: #EA3BF6;
-				-webkit-mask: url(#maskType02);
-				mask: url(#maskType02);
-			}
-		}
-		.fig-type04 {
-			& > rect {
-				fill: #FFF960;
-				-webkit-mask: url(#maskType04);
-				mask: url(#maskType04);
-			}
-		}
-		@media screen and (min-width:768px) {
-			right:-11%;
-		}
-	}
-
-	.stamp_time {
-		position:absolute;
-		right:0;
-		bottom:0;
-		width:6.25rem;
-		height:6.25rem;
-		background: {
-			image: url(../assets/images/main/stamp_live-time.png);
-			size: cover;
-			repeat: no-repeat;
-			position: center center;
-		}
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		z-index: 1;
-		p {
-			font-size:0.875rem;
-			font-weight: 700;
-			color:#826DFF;
-			span {
-				display: block;
-				font-size:0.625rem;
-				font-weight: 700;
-				color:inherit;
-			}
-		}
-	}
-
-	.wrt_info {
-		figure {
-			display: inline-block;
-			width:34px;
-			height:34px;
-			border-radius: 50%;
-			overflow: hidden;
-		}
-		.wrt {
-			display: inline-block;
-			max-width:21%;
-			margin-left:6px;
-			font-size:0.875rem;
-			font-weight: 500;
-			color:#fff;
-			word-break:break-all;
-		}
-		.parti {
-			display: inline-block;
-			padding-left:21px;
-			margin-left:10px;
-			font-weight: 500;
-			font-size:0.875rem;
-			span {
-				display: inline-block;
-				margin-top:-2px;
-				font-size: inherit;
-				font-weight: inherit;
-				color:rgba(255,255,255, .4);
-				&.now {
-					margin-right:5px;
-					color:#fff;
-				}
-			}
-			&._live {
-				background: {
-					image: url(../assets/icons/ico_user-count.png);
-					size: 18px;
-					repeat: no-repeat;
-					position: left center;
-				}
-			}
-			&._vod {
-				background: {
-					image: url(../assets/icons/ico_user-vod.png);
-					size: 18px;
-					repeat: no-repeat;
-					position: left center;
-				}
-			}
-		}
-	}
-	.quest_list {
-		._item {
-			position:relative;
-			padding:0.875rem 1.25rem 0.9rem;
-			margin-bottom:1rem;
-			border-radius: 16px;
-			background-color: #1F1F1F;
-			font-size:1.125rem;
-			font-weight: 500;
-			line-height:1.4;
-			color:#fff;
-			// &:first-child {
-			// 	margin-top:0;
-			// }
-			&:after {
-				content: '';
-				position:absolute;
-				right:-3px;
-				bottom:-6px;
-				display: block;
-				width:12px;
-				height:19px;
-				background: {
-					image: url(../assets/images/common/bubble_tail.png);
-					size:12px;
-					repeat: no-repeat;
-					position:0 0;
-				};
-			}
-			a {
-				max-height:2.813rem;
-				font-size:inherit;
-				font-weight: inherit;
-				line-height:inherit;
-				color:inherit;
-				@include ellipse(2);
-			}
-		}
-	}
+}
+.stamp_time {
+	background-image: url(../assets/images/main/stamp_live-time.png);
+}
+.stamp_challenge {
+	background-image: url(../assets/images/main/stamp_challenge.png);
+}
+.stamp_ans-select {
+	background-image: url(../assets/images/main/stamp_ans-select.png);
 }

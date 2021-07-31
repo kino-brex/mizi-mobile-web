@@ -20,7 +20,7 @@
 	src: url(/assets/fonts/NotoSans-Regular.woff) format("woff");
 }
 @font-face {
-	 font-family: 'NotoSansKR'; font-style: normal; font-weight: 500;
+	 font-family: 'NotoSansKR'; font-style: normal; font-weight: 600;
 	 src: url(/assets/fonts/NotoSans-Medium.eot) format('eot');
 	 src: local('※'), url(/assets/fonts/NotoSans-Medium.eot?#iefix) format('embedded-opentype');
 	 src: url(/assets/fonts/NotoSans-Medium.woff2) format('woff2'),
@@ -140,30 +140,101 @@ button {cursor:pointer; border:none; margin:0; padding:0;background-color: rgba(
 	}
 }
 
-// vuetify reset
-body {
-	[class*='theme--'] {
-	// .theme--light {
-		&.v-application {
-			background-color: #202020;
-			p {
-				margin-bottom:0;
+// Component
+.chkwrap {
+  display: block;
+	label {
+		position:relative;
+		display: inline-block;
+		cursor: pointer;
+		input[type=checkbox] {
+			position: absolute;
+			left:0;
+			border:0;
+			width:0;
+			height:0;
+			z-index: -1;
+			visibility: hidden;
+			+ span {
+				color:#999999;
 			}
-			ul, ol {
-				padding-left:0;
-			}
-		}
-		&.v-btn {
-			box-shadow: none;
-			&:before {
-				display: none;
-			}
-			&:not(.v-btn--round){
-				&.v-size--default {
-					min-width:auto;
-					padding:inherit;
+			&:checked{
+				+ span {
+					color:#fff;
 				}
 			}
+		}
+	}
+}
+
+.tabs-container {
+	.tabs-menu {
+		&:after {
+			@extend %clearer
+		}
+	}
+	._tab {
+		float:left;
+		color:#fff;
+		a, button {
+			color:inherit;
+			font-size:inherit;
+			font-weight: inherit;
+		}
+	}
+}
+
+.single-link {
+	display: block;
+	font-size:1.25rem;
+	font-weight: 600;
+	.point {
+		display: inline;
+		padding:8px 10px 7px;
+		border-radius: 20px;
+		background:#DF5931;
+		font-size:inherit;
+		font-weight:700;
+		color:inherit;
+		vertical-align: middle;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		-ms-border-radius: 20px;
+		-o-border-radius: 20px;
+	}
+	span {
+		display: block;
+		margin-top:8px;
+		font-size:0.875rem;
+		color:#999999;
+	}
+}
+
+// Vuetify reset
+[class*='theme--'] {
+	// .theme--light {
+	&.v-application {
+		background-color: #202020;
+		p {
+			margin-bottom:0;
+		}
+		ul, ol {
+			padding-left:0;
+		}
+	}
+	&.v-btn {
+		box-shadow: none;
+		&:before {
+			display: none;
+		}
+		&:not(.v-btn--round){
+			&.v-size--default {
+				min-width:auto;
+				padding:inherit;
+			}
+		}
+		&.v-btn--has-bg {
+			background-color: transparent;
 		}
 	}
 }
