@@ -122,7 +122,7 @@
 					</div>
 					<div class="card_cont">
 						<a href="#" class="single-link colr_white">
-							라이브에 <span class="point">반응하기 이모지</span> 가 업데이트 되었습니다.
+							라이브에 <span class="point _orange">반응하기 이모지</span> 가 업데이트 되었습니다.
 							<span>5시간 전</span>
 						</a>
 					</div>
@@ -178,7 +178,7 @@
 						<!-- <v-btn class="btn-locked ic-32 ic_locked"><span class="a11y">Locked content</span></v-btn> -->
 					</div>
 					<div class="card_cont">
-						<p class="heading">도대체 <i class="emoji size-44 em_home"></i> 집은 어떻게 사요?</p>
+						<p class="heading">도대체 <i class="emoji size-44 em_home"></i> 집은 어떻게 <i class="emoji size-44 em_bar"></i><br><i class="emoji size-44 em_money"></i> 사요?</p>
 						<p class="answer">
 							<strong>A.</strong>
 							그래서 꾸준히 공부를 해야해요. 투자에 대한 공부를 말이죠
@@ -197,6 +197,26 @@
 								<span class="now">999</span>
 							</div>
 						</div>
+					</div>
+				</div>
+				</a>
+				<!--// card -->
+
+				<!-- card -->
+				<a href="#">
+				<div class="card card-black">
+					<div class="card_head">
+						<p class="head-notice">
+							<i class="ic-32 ic_noti"><span class="a11y">이벤트</span></i>
+							이벤트
+						</p>
+						<!-- <v-btn class="btn-locked ic-32 ic_locked"><span class="a11y">Locked content</span></v-btn> -->
+					</div>
+					<div class="card_cont">
+						<a href="#" class="single-link colr_white">
+							가입을 축하해요! <span class="point _purple">라이브</span> 에 참여하고 <span class="point _purple">선물</span> 받아가세요!
+							<span>어제</span>
+						</a>
 					</div>
 				</div>
 				</a>

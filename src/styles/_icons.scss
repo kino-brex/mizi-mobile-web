@@ -56,18 +56,25 @@
 
 // Emoji
 .emoji {
-  display: inline-block;
-  background: {
-    position:center center;
-    repeat:no-repeat;
-    size:cover;
-  }
-  vertical-align: top;
-  &.size-44 {
-    width:2.75rem;
-    height:2.75rem;
-  }
-  &.em_home {
-    background-image: url(../assets/icons/emoji_home.png)
-  }
+	display: inline-block;
+	background: {
+		position:center center;
+		repeat:no-repeat;
+		size:cover;
+	}
+	vertical-align: top;
+	&.size-44 {
+		width:2.75rem;
+		height:2.75rem;
+	}
+	&.em_home {
+		background-image: url(../assets/icons/emoji_home.png)
+	}
+	&.em_money {
+		background-image: url(../assets/icons/emoji_money.png)
+	}
+	&.em_bar {
+		background-image: url(../assets/icons/emoji_bar.png);
+		background-size: auto 6px;
+	}
 }

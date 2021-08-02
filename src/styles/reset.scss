@@ -192,7 +192,7 @@ button {cursor:pointer; border:none; margin:0; padding:0;background-color: rgba(
 		display: inline;
 		padding:8px 10px 7px;
 		border-radius: 20px;
-		background:#DF5931;
+		background:#1F1F1F;
 		font-size:inherit;
 		font-weight:700;
 		color:inherit;
@@ -201,6 +201,12 @@ button {cursor:pointer; border:none; margin:0; padding:0;background-color: rgba(
 		-moz-border-radius: 20px;
 		-ms-border-radius: 20px;
 		-o-border-radius: 20px;
+		&._orange {
+			background:#DF5931;
+		}
+		&._purple {
+			background:#5934D5;
+		}
 	}
 	span {
 		display: block;
