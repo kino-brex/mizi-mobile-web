@@ -7,10 +7,10 @@
 	}
 }
 html, body {
-  height:100%;
-  min-height:100%;
+	height:100%;
+	min-height:100%;
 	margin:0 auto;
-  background-color: #202020;
+	background-color: #202020;
 }
 
 .logo {
@@ -27,100 +27,231 @@ html, body {
 }
 
 .page {
-  position:relative;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  width:100%;
-  max-width:768px;
-  height:100%;
-  min-height:100%;
-  margin:0 auto;
-  padding-bottom:100px;
-  .page {
-    max-width:100%;
-    height:auto;
-    min-height:auto;
-  }
+	position:relative;
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	width:100%;
+	max-width:768px;
+	height:100%;
+	min-height:100%;
+	margin:0 auto;
+	padding-bottom:100px;
+	.page {
+		max-width:100%;
+		height:auto;
+		min-height:auto;
+	}
 }
 .row {
-  position:relative;
-  min-height:100%;
-  margin-left:1.5rem;
-  margin-right:1.5rem;
+	position:relative;
+	min-height:100%;
+	margin-left:1.5rem;
+	margin-right:1.5rem;
 }
 
 .header {
-  position:relative;
-  width:100%;
-  padding:10px 20px;
-  margin-bottom:6px;
-  text-align: left;
-  .util {
-    position:absolute;
-    right:20px;
-    top:50%;
-    @include transform(translateY(-50%));
-  }
-  .logo {
-    margin-bottom:0;
-    width:4rem;
-    height:2.75rem;
-    background-size:auto 100%;
-    background-position: left center;
-    a {
-      display: inline-block;
-      width:100%;
-      height:100%;
-    }
-  }
-  .btn_alram {
-    position:relative;
-    background-image: url(../assets/icons/ico_alram.png);
-    &.v-btn {
-      width:2rem;
-      height:2rem;
-      background-color:transparent;
-      .v-btn__content {
-        display: block;
-        flex:none;
-      }
-    }
-    .new {
-      content: '';
-      position:absolute;
-      right:0;top:0;
-      display: inline-block;
-      width:4px;
-      height:4px;
-      background-color: #EA706B;
-      border-radius: 50%;
-    }
-  }
+	position:relative;
+	width:100%;
+	padding:10px 20px;
+	margin-bottom:6px;
+	text-align: left;
+	.util {
+		position:absolute;
+		right:20px;
+		top:50%;
+		@include transform(translateY(-50%));
+	}
+	.logo {
+		margin-bottom:0;
+		width:4rem;
+		height:2.75rem;
+		background-size:auto 100%;
+		background-position: left center;
+		a {
+			display: inline-block;
+			width:100%;
+			height:100%;
+		}
+	}
+	.btn_alram {
+		position:relative;
+		background-image: url(../assets/icons/ico_alram.png);
+		&.v-btn {
+			width:2rem;
+			height:2rem;
+			background-color:transparent;
+			.v-btn__content {
+				display: block;
+				flex:none;
+			}
+		}
+		.new {
+			content: '';
+			position:absolute;
+			right:0;top:0;
+			display: inline-block;
+			width:4px;
+			height:4px;
+			background-color: #EA706B;
+			border-radius: 50%;
+		}
+	}
+}
+
+.alram_page {
+	.list_wrap {
+		a {
+			position:relative;
+			display: block;
+			width:100%;
+			height:100%;
+			padding:1.25rem;
+			border-radius: 16px;
+			background-color: #333333;
+			color:#fff;
+			&:before {
+				content: '';
+				position:absolute;
+				left:3px;
+				bottom:-9px;
+				display: block;
+				width:70px;
+				height:26px;
+				background: {
+					image: url(../assets/images/common/bubble_tail-left.png);
+					size: auto 26px;
+					repeat: no-repeat;
+					position: 0 bottom;
+				}
+			}
+			> p, > span {
+				color:inherit;
+			}
+			p {
+				line-height:1.4;
+				@include ellipse(2);
+			}
+			span {
+				display: block;
+				margin-top:0.75rem;
+				font-size:0.75rem;
+				> span {
+					display: inline;
+					margin-top:0;
+				}
+			}
+		}
+		._item {
+			position:relative;
+			padding-left:35px;
+			padding-bottom:30px;
+			margin-top:32px;
+			color:#fff;
+			&:first-child {
+				margin-top:0;
+			}
+			.time {
+				position:absolute;
+				right:0;
+				bottom:0;
+				font-size:0.75rem;
+				color:#999999;
+			}
+		}
+	}
+	.list_box {
+		margin-bottom: 30px;
+	}
+	[class*='alram-'] {
+		position:absolute;
+		left:0;
+		bottom:0;
+		i {
+			position:absolute;
+			bottom: 2.2rem;
+			left: 1.4rem;
+			display: inline-block;
+			width:8px;
+			height:8px;
+			background: {
+				image: url(../assets/icons/ico_alram-new.png);
+				size:cover;
+				repeat: no-repeat;
+				position:center center;
+			}
+		}
+	}
+	.alram-type01 {
+		background: {
+			image: url(../assets/icons/ico_alram-type01.png);
+			size:1.75rem;
+		}
+	}
+	.alram-type02 {
+		background: {
+			image: url(../assets/icons/ico_alram-type02.png);
+			size:1.75rem;
+		}
+	}
+	.pass_break {
+		position:relative;
+		padding-top:40px;
+		margin-bottom:40px;
+		font-size:0.75rem;
+		color:#666666;
+		text-align: center;
+		&:before {
+			content: '';
+			position:absolute;
+			left:0;
+			top:25%;
+			display: block;
+			width:100%;
+			height:1px;
+			background-color: #474747;
+		}
+		&:after {
+			content: '';
+			position:absolute;
+			left:50%;
+			top:0;
+			@include transform(translate(-50%, 0));
+			width:120px;
+			height:28px;
+			background: {
+				color:#202020;
+				image: url(../assets/images/common/break_img.png);
+				repeat: no-repeat;
+				position:center center;
+				size: auto 28px;
+			}
+		}
+	}
 }
 
 .bottom-tab-bar {
-  height: 72px;
-  width: 100%;
-  position: fixed;
-  left:0;
-  bottom: 0px;
-  display: flex;
-  background-color: black;
-  z-index: 10;
-  .bottom-tab {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    em {
-      color: lightgray;
-      font-size: 24px;
-    }
-    &.active {
-      em {
-        color: mediumpurple;
-      }
-    }
-  }
+	height: 72px;
+	width: 100%;
+	position: fixed;
+	left:0;
+	bottom: 0px;
+	display: flex;
+	background-color: black;
+	z-index: 10;
+	.bottom-tab {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		em {
+			color: lightgray;
+			font-size: 24px;
+		}
+		&.active {
+			em {
+				color: mediumpurple;
+			}
+		}
+	}
 }

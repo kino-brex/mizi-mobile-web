@@ -6,10 +6,24 @@
 	height:1.125rem;
 	background-size:1.125rem;
 }
+.ic-24 {
+	width:1.5rem;
+	height:1.5rem;
+	background-size:1.5rem;
+}
+.ic-28 {
+	width:1.75rem;
+	height:1.75rem;
+	background-size:1.75rem;
+}
 .ic-32 {
 	width:2rem;
 	height:2rem;
 	background-size:2rem;
+}
+.ic-36 {
+	width:2.25rem;
+	height:2.25rem;
 }
 [class^='ic-'] {
 	display: inline-block;
@@ -18,7 +32,6 @@
 		position: center center;
 		size: cover;
 	}
-	margin-top:-2px;
 	&.ic_live {
 		background-image: url(../assets/icons/ico_live.png);
 	}
@@ -51,6 +64,9 @@
 	}
 	&.ic_reply {
 		background-image: url(../assets/icons/ico_reply.png);
+	}
+	&.ic_attach {
+		background-image: url(../assets/icons/ico_attach.png);
 	}
 }
 

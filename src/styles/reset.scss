@@ -140,6 +140,14 @@ button {cursor:pointer; border:none; margin:0; padding:0;background-color: rgba(
 	}
 }
 
+.noscroll {
+	overflow: hidden!important;
+	height: 100%;
+	.wrap {
+		overflow: hidden;
+	}
+}
+
 // Component
 .chkwrap {
   display: block;
@@ -216,6 +224,86 @@ button {cursor:pointer; border:none; margin:0; padding:0;background-color: rgba(
 	}
 }
 
+.modal-popup {
+	position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #202020;
+  display: table;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  color:#fff;
+
+	.modal-head {
+		position:relative;
+		width:100%;
+		height: 4rem;
+	}
+
+	.modal_btn-close {
+		position:absolute;
+		right:20px;
+		top:14px;
+		width:2.25rem;
+		height:2.25rem;
+		color:#fff;
+		div {
+			position:relative;
+			width:100%;
+			height:100%;
+			> span:not(.a11y){
+				position: absolute;
+				top: 45%;
+				left: 15%;
+				width: 24px;
+				height: 2px;
+				background-color: #fff;
+			}
+		}
+		.line01 {
+			transform: rotate(135deg) translateX(0%);
+		}
+		.line02 {
+			transform: rotate(45deg) translateX(0%);
+		}
+
+		&.black {
+			> span:not(.a11y){
+				background-color: #000;
+			}
+		}
+	}
+
+	.modal-inner {
+		height:calc(100% - 64px);
+		padding-left:1.5rem;
+		padding-right:1.5rem;
+		padding-bottom:60px;
+		text-align: left;
+		overflow-y: auto;
+		h3 {
+			margin-bottom:1.25rem;
+			font-size:1.5rem;
+			font-weight: 700;
+			color:#fff;
+		}
+	}
+}
+
+.list_wrap {
+	position:relative;
+	.list_box {
+		overflow: auto;
+	}
+	.v-list-item {
+		min-height:inherit;
+		padding:0;
+	}
+}
+
 // Vuetify reset
 [class*='theme--'] {
 	// .theme--light {
@@ -226,6 +314,9 @@ button {cursor:pointer; border:none; margin:0; padding:0;background-color: rgba(
 		}
 		ul, ol {
 			padding-left:0;
+		}
+		a {
+			color: inherit;
 		}
 	}
 	&.v-btn {
@@ -242,5 +333,13 @@ button {cursor:pointer; border:none; margin:0; padding:0;background-color: rgba(
 		&.v-btn--has-bg {
 			background-color: transparent;
 		}
+	}
+	&[class*='v-list'],
+	&.v-card {
+		background-color: transparent;
+		box-shadow: none !important;
+	}
+	.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
+		background-color: transparent;
 	}
 }
