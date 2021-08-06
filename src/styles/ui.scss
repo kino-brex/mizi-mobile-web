@@ -74,22 +74,77 @@
 // Interest
 .interest-wrap {
 	padding-top:15.557%;
-	text-align: left;
+	text-align: center;
 	h2 {
+		max-width:60%;
+		margin:0 auto;
 		font-size:1.5rem;
 		color:#fff;
+		p {
+			margin-top:5px;
+			font-size:1rem;
+			color:#999999;
+		}
 	}
-	.type_list {
+	.choice-list {
 		margin-top:4px;
-		._item {
-			display: inline-block;
-			min-height:auto;
-			line-height:inherit;
-			margin-top:8px;
-			margin-right:8px;
-			&:last-child {
-				margin-right:0;
+		[class^='_item'] {
+			background: {
+				position:center center;
+				repeat: no-repeat;
 			}
+		}
+		.v-input__control, .v-input__slot {
+			height:100%;
+		}
+		._item01 {
+			width:210px;
+			height:210px;
+			background: {
+				image: url(../assets/images/common/interest_type01-off.png);
+				size: 210px;
+			}
+		}
+		._item02 {
+			width:180px;
+			height:180px;
+			background: {
+				image: url(../assets/images/common/interest_type02-off.png);
+				size: 180px;
+			}
+		}
+		._item03 {
+			width:200px;
+			height:200px;
+			background: {
+				image: url(../assets/images/common/interest_type03-off.png);
+				size: 200px;
+			}
+		}
+		._item04 {
+			width:180px;
+			height:180px;
+			background: {
+				image: url(../assets/images/common/interest_type04-off.png);
+				size: 180px;
+			}
+		}
+		._item05 {
+			width:190px;
+			height:190px;
+			background: {
+				image: url(../assets/images/common/interest_type05-off.png);
+				size: 190px;
+			}
+		}
+		.v-input--is-label-active {
+			&._item01 {
+				background-image: url(../assets/images/common/interest_type01-on.png);
+			}
+		}
+		._item {
+			
+			
 			label {
 				text-align:center;
 				input[type=checkbox] {

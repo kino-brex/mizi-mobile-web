@@ -6,6 +6,7 @@ import MyPage from "@/pages/main/MyPage.vue";
 import {AppStatusModule} from "@/store/modules/AppStatusModule";
 import MainLayout from "@/pages/MainLayout.vue";
 import SignInPage from "@/pages/SignInPage.vue";
+import InterestSet from "@/pages/InterestSet.vue";
 
 Vue.use(VueRouter)
 
@@ -48,6 +49,16 @@ const routes: Array<RouteConfig> = [
     name: SignInPage.name,
     components: {
       root: SignInPage
+    },
+    meta: {
+      anonymousCallable: true
+    }
+  },
+  {
+    path: '/interest',
+    name: InterestSet.name,
+    components: {
+      root: InterestSet
     },
     meta: {
       anonymousCallable: true
