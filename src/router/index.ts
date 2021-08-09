@@ -7,6 +7,8 @@ import {AppStatusModule} from "@/store/modules/AppStatusModule";
 import MainLayout from "@/pages/MainLayout.vue";
 import SignInPage from "@/pages/SignInPage.vue";
 import InterestSet from "@/pages/InterestSet.vue";
+import PopupGuide from "@/pages/Popup.vue";
+import HtmlGuide from "@/pages/Guide.vue";
 
 Vue.use(VueRouter)
 
@@ -59,6 +61,26 @@ const routes: Array<RouteConfig> = [
     name: InterestSet.name,
     components: {
       root: InterestSet
+    },
+    meta: {
+      anonymousCallable: true
+    }
+  },
+  {
+    path: '/popup',
+    name: PopupGuide.name,
+    components: {
+      root: PopupGuide
+    },
+    meta: {
+      anonymousCallable: true
+    }
+  },
+  {
+    path: '/guide',
+    name: HtmlGuide.name,
+    components: {
+      root: HtmlGuide
     },
     meta: {
       anonymousCallable: true

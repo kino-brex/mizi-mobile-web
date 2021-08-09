@@ -6,9 +6,13 @@
 }
 .v-btn {
 	display: inline-block;
+	padding-top:0;
+	padding-bottom:0;
 	padding-left:.5rem;
 	padding-right:.5rem;
 	min-width:10px;
+	border-radius: 20px;
+	font-size:1rem;
 	font-weight: 700;
 	color:#202020;
 	.v-btn__content {
@@ -18,6 +22,10 @@
 		font-size:inherit;
 		font-weight: inherit;
 		color:inherit;
+	}
+	&.btn-primary {
+		background-color: #3145FF !important;
+		color:#fff;
 	}
 	&.btn-full {
 		width:100%;

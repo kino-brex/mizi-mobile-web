@@ -9,6 +9,7 @@ import '@/styles/reset.scss';
 import '@/styles/layout.scss';
 import '@/styles/button.scss';
 import '@/styles/ui.scss';
+import '@/styles/popup.scss';
 
 Vue.config.productionTip = false
 

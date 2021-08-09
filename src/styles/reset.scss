@@ -148,6 +148,47 @@ button {cursor:pointer; border:none; margin:0; padding:0;background-color: rgba(
 	}
 }
 
+// Vuetify reset
+[class*='theme--'] {
+	// .theme--light {
+	&.v-application {
+		background-color: #202020;
+		p {
+			margin-bottom:0;
+		}
+		ul, ol {
+			padding-left:0;
+		}
+		a {
+			color: initial;
+		}
+	}
+	&.v-btn {
+		box-shadow: none;
+		&:before {
+			display: none;
+		}
+		&:not(.v-btn--round){
+			&.v-size--default {
+				min-width:auto;
+				padding:0;
+			}
+		}
+		&.v-btn--has-bg {
+			background-color: transparent;
+		}
+	}
+	&[class*='v-list'],
+	&.v-card {
+		background-color: transparent;
+		box-shadow: none !important;
+	}
+	.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
+		background-color: transparent;
+	}
+}
+
+
 // Component
 .chkwrap {
   display: block;
@@ -223,6 +264,7 @@ button {cursor:pointer; border:none; margin:0; padding:0;background-color: rgba(
 		color:#999999;
 	}
 }
+
 
 .modal-popup {
 	position: fixed;
@@ -301,45 +343,5 @@ button {cursor:pointer; border:none; margin:0; padding:0;background-color: rgba(
 	.v-list-item {
 		min-height:inherit;
 		padding:0;
-	}
-}
-
-// Vuetify reset
-[class*='theme--'] {
-	// .theme--light {
-	&.v-application {
-		background-color: #202020;
-		p {
-			margin-bottom:0;
-		}
-		ul, ol {
-			padding-left:0;
-		}
-		a {
-			color: inherit;
-		}
-	}
-	&.v-btn {
-		box-shadow: none;
-		&:before {
-			display: none;
-		}
-		&:not(.v-btn--round){
-			&.v-size--default {
-				min-width:auto;
-				padding:inherit;
-			}
-		}
-		&.v-btn--has-bg {
-			background-color: transparent;
-		}
-	}
-	&[class*='v-list'],
-	&.v-card {
-		background-color: transparent;
-		box-shadow: none !important;
-	}
-	.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
-		background-color: transparent;
 	}
 }
